@@ -17,5 +17,10 @@ h1 {
 .left {
     float: left;
     width: 600px;
+    margin-top: 25px ;
 }
 
+.right {
+    width: 600px;
+    float: left;
+}
