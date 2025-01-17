@@ -1,6 +1,7 @@
 body {
     background-color: rgb(240, 211, 211)
 }
+
 h2 {
     color: rgb(83, 119, 162);
     font-family: "Dancing Script";
@@ -10,10 +11,11 @@ h1 {
 }
 
 .description {
-    width: 600px
+    width: 600px;
 }
+
 .left {
-    width: 600px
-    float: left
+    float: left;
+    width: 600px;
 }
 
