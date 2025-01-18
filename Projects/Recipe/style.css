@@ -1,13 +1,23 @@
 body {
     background-color: rgb(240, 211, 211)
 }
-
+ul {
+    font-size: 18pt;
+}
+li {
+    font-size: 18pt;
+}
+p {
+    font-size: 18pt;
+}
 h2 {
-    color: rgb(83, 119, 162);
+    color: rgb(204, 128, 204);
     font-family: "Dancing Script";
+    font-size: 40pt;
 }
 h1 {
-    font-family: "Edu Au VIC WA NT Arrows";
+    font-family: "Kalnia Glaze";
+    font-size: 40pt;
 }
 
 .description {
@@ -17,7 +27,7 @@ h1 {
 .left {
     float: left;
     width: 600px;
-    margin-top: 25px ;
+    margin-top: 48px ;
 }
 
 .right {
