@@ -35,3 +35,7 @@ h1 {
     width: 600px;
     float: left;
 }
+.navbar-brand {
+    font-family: "Dancing Script";
+    font-size: 40pt;
+}
