@@ -39,3 +39,8 @@ h1 {
     font-family: "Dancing Script";
     font-size: 40pt;
 }
+
+.nav-link:hover {
+    text-decoration: underline;
+    text-decoration-color: chartreuse;
+} 
