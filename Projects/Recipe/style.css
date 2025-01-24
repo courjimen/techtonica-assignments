@@ -21,10 +21,6 @@ h1 {
     margin-top: 40px;
 }
 
-.description {
-    width: 600px;
-}
-
 .left {
     float: left;
     width: 600px;
@@ -44,3 +40,37 @@ h1 {
     text-decoration: underline;
     text-decoration-color: chartreuse;
 } 
+
+.checked {
+    text-decoration: line-through;
+}
+.checkit {
+    text-decoration: line-through;
+}
+
+@media (max-width: 500px) {
+    body {
+        font-size: 12pt;
+    }
+    h1 {
+    font-size: 15pt;
+    text-align: left;
+    }
+    .navbar-brand {
+        font-size: 12pt;
+    }
+    p {
+        font-size: 8pt; text-align: left;
+    }
+    img {
+        inline-size: 100px;
+    }
+    li {
+      font-size: 8pt;
+    }
+}
+@media (min-width: 500px) {
+    img {
+        inline-size: 200px ;
+    }
+}
