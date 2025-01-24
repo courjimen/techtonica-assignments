@@ -9,6 +9,8 @@ li {
 }
 p {
     font-size: 18pt;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 h2 {
     color: rgb(204, 128, 204);
@@ -25,6 +27,7 @@ h1 {
     float: left;
     width: 45%;
     margin-top: 45px ;
+    margin-left: 10%
 }
 
 .right {
@@ -64,11 +67,22 @@ h1 {
         inline-size: 100px;
     }
     li {
-      font-size: 8pt;
+    font-size: 8pt;
     }
 }
 @media (min-width: 500px) {
     img {
         inline-size: 200px ;
     }
+}
+
+button {
+    color: rgb(206, 14, 203);
+    border: 2px dotted;
+    border-color: black;
+    border-radius: 15px;
+    margin-left: 34%;
+}
+.link {
+    margin-left: 50%
 }

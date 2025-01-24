@@ -21,8 +21,8 @@ label.appendChild(
     document.createTextNode("Too spicy for you?")
 );
 
-ingredients.appendChild(checkbox);
-ingredients.appendChild(label);
+toggle.appendChild(checkbox);
+toggle.appendChild(label);
 
 // adding strikethrough
 checkbox.addEventListener("click", function(){
@@ -51,4 +51,14 @@ checking.addEventListener("click", function(){
     } else {
         liText.classList.remove("checked");
     }
-});
+})
+
+function toggleIt() {
+    let x = document.getElementById("dropdown");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display ="none";
+    }
+   }
+
