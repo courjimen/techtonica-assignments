@@ -23,13 +23,14 @@ h1 {
 
 .left {
     float: left;
-    width: 600px;
-    margin-top: 55px ;
+    width: 45%;
+    margin-top: 45px ;
 }
 
 .right {
-    width: 600px;
+    width: 45%;
     float: left;
+    margin-top: 5%;
 }
 .navbar-brand {
     font-family: "Dancing Script";
@@ -42,9 +43,6 @@ h1 {
 } 
 
 .checked {
-    text-decoration: line-through;
-}
-.checkit {
     text-decoration: line-through;
 }
 

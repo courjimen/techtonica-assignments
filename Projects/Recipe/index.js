@@ -1,16 +1,4 @@
-// adding checkboxes to list items
-function addChecks(){
-    let listItems = document.querySelectorAll("#ingredients li")
-    listItems.forEach(e => {
-        let checkbox = document.createElement("input");
-        checkbox.setAttribute("type", "checkbox");
-        e.prepend(checkbox);
-    });
-    }
-    
-    addChecks();
-
-// adding new list item to end of list
+//adding new list item to end of list
 let newItem = document.createElement("li");
 newItem.textContent = "Jalapenos";
 document.querySelector('#ingredients').appendChild(newItem);
@@ -40,9 +28,27 @@ ingredients.appendChild(label);
 checkbox.addEventListener("click", function(){
     if(checkbox.checked){
     label.classList = "checked";
-    } 
+    } else {
+        label.classList.remove("checked");
+    }
 })
 
+// List checklist
+let listItems = document.querySelectorAll("#ingredients li");
+let liText = document.getElementById("test").innerHTML;
 
+console.log(liText);
 
+listItems.forEach(e => {
+    let checking = document.createElement("input");
+    checking.setAttribute("type", "checkbox");
+    e.prepend(checking);
+});
 
+checking.addEventListener("click", function(){
+    if(checking.checked){
+    liText.classList = "checked";
+    } else {
+        liText.classList.remove("checked");
+    }
+});
