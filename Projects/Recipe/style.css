@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(240, 211, 211)
+    background-color: rgb(240, 211, 211);
 }
 ul {
     font-size: 18pt;
@@ -57,6 +57,9 @@ h1 {
     font-size: 15pt;
     text-align: left;
     }
+    h2 {
+        font-size: 15pt;
+    }
     .navbar-brand {
         font-size: 12pt;
     }
@@ -74,6 +77,7 @@ h1 {
     img {
         inline-size: 200px ;
     }
+
 }
 
 button {

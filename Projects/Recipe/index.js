@@ -35,9 +35,10 @@ checkbox.addEventListener("click", function(){
 
 // List checklist
 let listItems = document.querySelectorAll("#ingredients li");
-let liText = document.getElementById("test").innerHTML;
 
-console.log(liText);
+// let liText = document.getElementById("test").innerHTML;
+
+// console.log(liText);
 
 listItems.forEach(e => {
     let checking = document.createElement("input");
