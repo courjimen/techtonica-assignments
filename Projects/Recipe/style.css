@@ -1,22 +1,27 @@
 body {
     background-color: rgb(240, 211, 211);
 }
+
 ul {
     font-size: 18pt;
 }
+
 li {
     font-size: 18pt;
 }
+
 p {
     font-size: 18pt;
     margin-left: 5%;
     margin-right: 5%;
 }
+
 h2 {
     color: rgb(204, 128, 204);
     font-family: "Dancing Script";
     font-size: 40pt;
 }
+
 h1 {
     font-family: "Kalnia Glaze";
     font-size: 40pt;
@@ -26,7 +31,7 @@ h1 {
 .left {
     float: left;
     width: 45%;
-    margin-top: 45px ;
+    margin-top: 45px;
     margin-left: 10%
 }
 
@@ -35,6 +40,7 @@ h1 {
     float: left;
     margin-top: 5%;
 }
+
 .navbar-brand {
     font-family: "Dancing Script";
     font-size: 40pt;
@@ -43,7 +49,7 @@ h1 {
 .nav-link:hover {
     text-decoration: underline;
     text-decoration-color: chartreuse;
-} 
+}
 
 .checked {
     text-decoration: line-through;
@@ -53,29 +59,40 @@ h1 {
     body {
         font-size: 12pt;
     }
+
     h1 {
-    font-size: 15pt;
-    text-align: left;
+        font-size: 15pt;
+        text-align: left;
     }
+
     h2 {
         font-size: 15pt;
     }
+
     .navbar-brand {
         font-size: 12pt;
     }
+
     p {
-        font-size: 8pt; text-align: left;
+        font-size: 8pt;
+        text-align: left;
     }
+
     img {
         inline-size: 100px;
     }
+
     li {
-    font-size: 8pt;
+        font-size: 8pt;
     }
 }
+
 @media (min-width: 500px) {
     img {
-        inline-size: 200px ;
+        inline-size: 200px;
+    }
+    h2 {
+        font-size: 30pt;
     }
 
 }
@@ -87,6 +104,7 @@ button {
     border-radius: 15px;
     margin-left: 34%;
 }
+
 .link {
     margin-left: 50%
 }
