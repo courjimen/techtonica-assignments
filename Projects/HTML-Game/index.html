@@ -1,13 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css">
     <title>Coin Flip Game</title>
 </head>
+
 <body>
-    
+    <h1>Coin Flip</h1>
+    <p>
+        INSERT GAME INSTRUCTIONS
+    </p>
+
+    <div class="coin-container" id="coin">
+        <!-- KEEP TRACK OF SCORE -->
+        <div class="score-container">
+            <div class="heads-scorebox">
+                Heads: (INSERT SCORE)
+            </div>
+
+            <div class="tails-scorebox">
+                Tails: (INSERT SCORE)
+            </div>
+        </div>
+        <!-- CREATE BOTH SIDES OF THE COIN -->
+        <div class="heads">
+            <img class=heads-img src="./canvaHead.png">
+        </div>
+        <div class="tails">
+            <img class="tails-img" src="./canvaTail.png">
+        </div>
+    </div>
+
+    <!-- BUTTON TO FLIP OR START OVER -->
+
+    <button id="flip-button">
+        Flip Coin
+    </button>
+
+    <button id="reset-button">
+        Start Over
+    </button>
+
 </body>
 <script src="index.js"></script>
+
 </html>

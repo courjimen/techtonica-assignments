@@ -1,3 +1,3 @@
-LOL! POP
+Coin Flip Game
 
-Balloon pop game that reveals a cute LOL Doll character. 
+Flip the coin.
