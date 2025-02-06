@@ -3,8 +3,10 @@ let flipCoinButton = document.getElementById("flip-button");
 let backCoin = document.getElementById("tails");
 let frontCoin = document.getElementById("heads");
 const headsScoreBox = document.getElementById("heads-score");
+const tailsScoreBox = document.getElementById("tails-score");
 
 let headsCount = 0;
+let tailsCount = 0;
 // console.log(flipCoinButton);
     // upon click it flips the coin 
 flipCoinButton.addEventListener("click", () => {
@@ -13,6 +15,9 @@ flipCoinButton.addEventListener("click", () => {
     if(random === 1){
         headsCount += 1;
         headsScoreBox.innerText = headsCount;
+    } else {
+        tailsCount +=1;
+        tailsScoreBox.innerText = tailsCount;
     }
     flip(random);
 })
