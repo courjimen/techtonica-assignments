@@ -13,38 +13,31 @@
     <p>
         INSERT GAME INSTRUCTIONS
     </p>
+    <!-- BUTTON TO FLIP -->
+
+    <button id="flip-button">Flip Coin</button>
 
     <div class="coin-container" id="coin">
-        <!-- KEEP TRACK OF SCORE -->
-        <div class="score-container">
-            <div class="heads-scorebox">
-                Heads: (INSERT SCORE)
-            </div>
-
-            <div class="tails-scorebox">
-                Tails: (INSERT SCORE)
-            </div>
-        </div>
         <!-- CREATE BOTH SIDES OF THE COIN -->
-        <div class="heads">
-            <img class=heads-img src="./canvaHead.png">
+        <div id="heads">
+            HEADS
         </div>
-        <div class="tails">
-            <img class="tails-img" src="./canvaTail.png">
+        <div id="tails">
+            TAILS
+        </div>
+    </div>
+    <!-- KEEP TRACK OF SCORE -->
+    <div id="score-container">
+        <div class="heads-scorebox">
+            Heads: <span id="heads-score">0</span>
+        </div>
+
+        <div class="tails-scorebox">
+            Tails: (INSERT SCORE)
         </div>
     </div>
 
-    <!-- BUTTON TO FLIP OR START OVER -->
-
-    <button id="flip-button">
-        Flip Coin
-    </button>
-
-    <button id="reset-button">
-        Start Over
-    </button>
-
+    <script type="module" src="index.js"></script>
 </body>
-<script src="index.js"></script>
 
 </html>

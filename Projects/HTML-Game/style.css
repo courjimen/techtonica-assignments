@@ -4,7 +4,11 @@ body {
 }
 
 /* CONTAINER FOR MY COIN */
+
 .coin-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
     text-align: center;
     align-items: center;
     border-radius: 20px;
@@ -13,8 +17,7 @@ body {
     width: 100%; 
     
 }
-.score-container {
-    background-color: aqua;
+#score-container {
     display: inline-flex;
 }
 .heads-scorebox {
@@ -23,15 +26,24 @@ body {
     margin-right: 50px;
 }
 .tails-scorebox {
+    background-color: rgb(212, 180, 243);
     border-style: double;
 }
-.heads, .tails {
+#heads, #tails {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgb(246, 214, 116);
+    border: 2px solid red;
+    color: black;
     position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
 }
 
-img {
-    max-width: 100%;
+#heads-score {
+    color: hotpink 
 }
+
+
