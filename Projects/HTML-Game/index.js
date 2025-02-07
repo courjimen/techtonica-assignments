@@ -5,6 +5,8 @@ let frontCoin = document.getElementById("heads");
 const headsScoreBox = document.getElementById("heads-score");
 const tailsScoreBox = document.getElementById("tails-score");
 
+
+// Click to play Coin Flip
 let headsCount = 0;
 let tailsCount = 0;
 
@@ -30,5 +32,5 @@ function flip (coinSide) {
         console.log("tails")
         backCoin.style.visibility = "visible";
         frontCoin.style.visibility = "hidden";
-    }
+    } 
 }

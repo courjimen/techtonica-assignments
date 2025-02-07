@@ -10,32 +10,35 @@
 </head>
 
 <body>
-    <h1>Coin Flip</h1>
-    <p>
-    <h3>Try your luck!</h3>
-    Click the button below to flip your coin and see if you get heads or tails!
-    </p>
+    <!-- Play the Game -->
+    <div id="coin-flip">
+        <h1>Coin Flip Game</h1>
+        <p>
+        <h3>Try your luck!</h3>
+        Click the button below to flip your coin and see if you get heads or tails!
+        </p>
 
-    <!-- BUTTON TO FLIP -->
-    <button id="flip-button">Flip Coin</button>
-<!-- CREATE BOTH SIDES OF THE COIN -->
-    <div class="coin-container" id="coin">
-        <div id="heads">
-            <img src="./canvaHead.png">
-        </div>
+        <!-- BUTTON TO FLIP -->
+        <button id="flip-button">Flip Coin</button>
+        <!-- CREATE BOTH SIDES OF THE COIN -->
+        <div class="coin-container" id="coin">
+            <div id="heads">
+                <img src="./canvaHead.png">
+            </div>
 
-        <div id="tails">
-            <img src="./canvaTail.png">
+            <div id="tails">
+                <img src="./canvaTail.png">
+            </div>
         </div>
-    </div>
-    <!-- KEEP TRACK OF SCORE -->
-    <div id="score-container">
-        <div class="heads-scorebox">
-            Heads: <span id="heads-score">0</span>
-        </div>
+        <!-- KEEP TRACK OF SCORE -->
+        <div id="score-container">
+            <div class="heads-scorebox">
+                Heads: <span id="heads-score">0</span>
+            </div>
 
-        <div class="tails-scorebox">
-            Tails: <span id="tails-score">0</span>
+            <div class="tails-scorebox">
+                Tails: <span id="tails-score">0</span>
+            </div>
         </div>
     </div>
 

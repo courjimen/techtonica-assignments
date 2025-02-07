@@ -1,5 +1,10 @@
 Coin Flip Game
 
+This game is one of pure chance! Try flipping the coin by clicking the button and tally how many heads or tails you  get. 
+
+Set Up Instructions:
+Clone my HTML Game Repository to your local device.
+
 Flip the coin.
 
 # TODO
