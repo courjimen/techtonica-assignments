@@ -1,14 +1,12 @@
 h1 {
-font-family: fantasy;
-font-size: 60px;
+    font-family: fantasy;
+    font-size: 60px;
 }
 
 p {
-font-size: 30px;
+    font-size: 30px;
 }
-
 
 body {
-   background-color: rgb(158, 221, 158);
+    background-color: rgb(158, 221, 158);
 }
-
