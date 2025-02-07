@@ -1,36 +1,110 @@
 body {
-    background-color: rgb(240, 211, 211)
+    background-color: rgb(240, 211, 211);
 }
+
 ul {
     font-size: 18pt;
 }
+
 li {
     font-size: 18pt;
 }
+
 p {
     font-size: 18pt;
+    margin-left: 5%;
+    margin-right: 5%;
 }
+
 h2 {
     color: rgb(204, 128, 204);
     font-family: "Dancing Script";
     font-size: 40pt;
 }
+
 h1 {
     font-family: "Kalnia Glaze";
     font-size: 40pt;
-}
-
-.description {
-    width: 600px;
+    margin-top: 40px;
 }
 
 .left {
     float: left;
-    width: 600px;
-    margin-top: 48px ;
+    width: 45%;
+    margin-top: 45px;
+    margin-left: 10%
 }
 
 .right {
-    width: 600px;
+    width: 45%;
     float: left;
+    margin-top: 5%;
+}
+
+.navbar-brand {
+    font-family: "Dancing Script";
+    font-size: 40pt;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+    text-decoration-color: chartreuse;
+}
+
+.checked {
+    text-decoration: line-through;
+}
+
+@media (max-width: 500px) {
+    body {
+        font-size: 12pt;
+    }
+
+    h1 {
+        font-size: 15pt;
+        text-align: left;
+    }
+
+    h2 {
+        font-size: 15pt;
+    }
+
+    .navbar-brand {
+        font-size: 12pt;
+    }
+
+    p {
+        font-size: 8pt;
+        text-align: left;
+    }
+
+    img {
+        inline-size: 100px;
+    }
+
+    li {
+        font-size: 8pt;
+    }
+}
+
+@media (min-width: 500px) {
+    img {
+        inline-size: 200px;
+    }
+    h2 {
+        font-size: 30pt;
+    }
+
+}
+
+button {
+    color: rgb(206, 14, 203);
+    border: 2px dotted;
+    border-color: black;
+    border-radius: 15px;
+    margin-left: 34%;
+}
+
+.link {
+    margin-left: 50%
 }

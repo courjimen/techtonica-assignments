@@ -1,0 +1,60 @@
+body {
+    background-color: rgb(158, 221, 158);
+    text-align: center;
+    font-family: fantasy;
+    font-size: x-large;
+}
+
+button  {
+    border-radius: 50px;
+    height: 50px;
+    width: 90px;
+    font-size: medium;
+    background-color:rgb(255, 255, 255);
+}
+
+/* CONTAINER FOR MY COIN */
+.coin-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: bisque;
+    height: 400px;
+    width: 100%; 
+    
+}
+#score-container {
+    display: inline-flex;
+}
+.heads-scorebox {
+    background-color: aqua;
+    border-style: double;
+    margin-right: 50px;
+}
+.tails-scorebox {
+    background-color: rgb(212, 180, 243);
+    border-style: double;
+}
+#heads, #tails {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgb(246, 214, 116);
+    border: 2px solid rgb(12, 11, 11);
+    color: black;
+    position: absolute;
+}
+
+#heads-score {
+    color: rgb(193, 14, 104);
+}
+
+#tails-score {
+    color:blue;
+}
