@@ -7,11 +7,10 @@ const tailsScoreBox = document.getElementById("tails-score");
 
 let headsCount = 0;
 let tailsCount = 0;
-// console.log(flipCoinButton);
+
     // upon click it flips the coin 
 flipCoinButton.addEventListener("click", () => {
-    // if random === 1 heads
-    let random = Math.floor(Math.random() * (2 - 1 + 1) + 1);
+    let random = Math.floor(Math.random() * 2 )+ 1;
     if(random === 1){
         headsCount += 1;
         headsScoreBox.innerText = headsCount;
@@ -22,8 +21,8 @@ flipCoinButton.addEventListener("click", () => {
     flip(random);
 })
 
-function flip (side) {
-    if(side === 1){
+function flip (coinSide) {
+    if(coinSide === 1){
         console.log("heads");
         backCoin.style.visibility = "hidden";
         frontCoin.style.visibility = "visible";
@@ -33,7 +32,3 @@ function flip (side) {
         frontCoin.style.visibility = "hidden";
     }
 }
-    // call on the images not the flip function & write a function (if/else format upon on click)
-// Make sure score is properly counting the heads & tails
-
-// add button functionality
