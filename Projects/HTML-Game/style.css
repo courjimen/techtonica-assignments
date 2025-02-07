@@ -10,10 +10,10 @@ button  {
     height: 50px;
     width: 90px;
     font-size: medium;
-    background-color:rgb(255, 255, 255)
+    background-color:rgb(255, 255, 255);
 }
-/* CONTAINER FOR MY COIN */
 
+/* CONTAINER FOR MY COIN */
 .coin-container {
     display: flex;
     justify-content: center;
@@ -52,9 +52,9 @@ button  {
 }
 
 #heads-score {
-    color: rgb(193, 14, 104) 
+    color: rgb(193, 14, 104);
 }
 
 #tails-score {
-    color:blue
+    color:blue;
 }
