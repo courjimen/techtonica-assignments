@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Balloon from './components/Balloon'
 import Counter from './components/Counter'
+import Prizes from './components/Prizes'
 import './App.css'
 
 function App() {
@@ -21,14 +22,47 @@ function App() {
       document.removeEventListener('click', numOfPops);
     };
   }, []);
-  
+
+  let balloonList = [
+    {
+      balloonNum: "Balloon 1",
+      prize: "",
+      status: "Winner!"
+    },
+    {
+      balloonNum: "Balloon 2",
+      prize: "",
+      status: "Sorry :("
+    },
+    {
+      balloonNum: "Balloon 3",
+      prize: "",
+      status: "Sorry :("
+    },
+    {
+      balloonNum: "Balloon 4",
+      prize: '',
+      status: "Winner!"
+    }
+  ];
+
   return (
     <>
       <button onClick={resetGame}>Reset Pops!</button>
-      <Balloon />
-      <Counter label={"Pops"} count={pop}/>
+      <Counter label={"Pops"} count={pop} />
+      <Prizes />
+      <div>
+      {balloonList.map((balloon, index) => (
+      <Balloon
+        key={index}
+        balloon={balloon.balloonNum}
+        prize={balloon.prize}
+        status={balloon.status }
+      />
+      ))}
+      </div>
     </>
-  )
+  );
 }
 
 export default App

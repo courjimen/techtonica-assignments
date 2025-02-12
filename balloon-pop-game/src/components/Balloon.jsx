@@ -1,20 +1,13 @@
 import React from 'react'
 
-export default function Balloon() {
+export default function Balloon({balloon, prize, status}) {
   return (
     <>
-    <div>
-        <h3>Balloon 1</h3>
-    </div>
-    <div>
-        <h3>Balloon 2</h3>
-    </div>
-    <div>
-        <h3>Balloon 3</h3>
-    </div>
-    <div>
-        <h3>Balloon 4</h3>
-    </div>
+    <h1>{balloon}</h1>
+    
+    <img src={prize}/>
+
+    <h3>{status}</h3>
     </>
 
   )
