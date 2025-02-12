@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function ({prize, status}) {
+export default function ({prize}) {
   return (
-    <img src={prize}/>
+    <h3>You won!</h3>
   )
 }

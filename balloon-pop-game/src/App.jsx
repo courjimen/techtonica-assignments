@@ -7,9 +7,10 @@ import './App.css'
 function App() {
   const [pop, setPops] = useState(0)
   const [balloon, setBalloon] = useState(false)
+
 // USE STATE (VISIBILITY)
 const handleClick = () => {
-  setBalloon(!balloon)
+    setBalloon(!balloon)
 }
 // USE STATE (COUNTER)
   const resetGame = () => {
