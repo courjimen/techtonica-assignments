@@ -1,9 +1,7 @@
 import React from 'react'
 
-export default function () {
+export default function ({prize, status}) {
   return (
-    <div>
-        
-    </div>
+    <img src={prize}/>
   )
 }

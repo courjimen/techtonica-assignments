@@ -1,11 +1,9 @@
 import React from 'react'
 
-export default function Balloon({balloon, prize, status}) {
+export default function Balloon({balloon, status}) {
   return (
     <>
     <h1>{balloon}</h1>
-    
-    <img src={prize}/>
 
     <h3>{status}</h3>
     </>

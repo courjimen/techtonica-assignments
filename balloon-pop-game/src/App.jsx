@@ -6,11 +6,16 @@ import './App.css'
 
 function App() {
   const [pop, setPops] = useState(0)
-
+  const [balloon, setBalloon] = useState(false)
+// USE STATE (VISIBILITY)
+const handleClick = () => {
+  setBalloon(!balloon)
+}
+// USE STATE (COUNTER)
   const resetGame = () => {
     setPops(-1);
   }
-
+// CLICK & COUNT ANYWHERE ON THE SCREEN
   useEffect(() => {
     const numOfPops = () => {
       setPops((prevPop) => prevPop + 1);
@@ -22,30 +27,29 @@ function App() {
       document.removeEventListener('click', numOfPops);
     };
   }, []);
-
+// MY ARRAY OF BALLOONS
   let balloonList = [
     {
       balloonNum: "Balloon 1",
-      prize: "./src/images/HannahHedgeHog.jpeg",
       status: "Winner!"
     },
     {
       balloonNum: "Balloon 2",
-      prize: "",
       status: "Sorry :("
     },
     {
       balloonNum: "Balloon 3",
-      prize: "",
       status: "Sorry :("
     },
     {
       balloonNum: "Balloon 4",
-      prize: './src/images/Teddy-Tiger.jpeg',
       status: "Winner!"
     }
   ];
 
+// FUNCTION TO HIDE/REVEAL PRIZES ON CLICK ("POP" THE BALLOON)
+
+// MY CHILDREN COMPONENTS & BUTTONS
   return (
     <>
       <button onClick={resetGame}>Reset Pops!</button>
