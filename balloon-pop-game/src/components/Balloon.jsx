@@ -1,12 +1,23 @@
 import React from 'react'
 
-export default function Balloon({balloon, status}) {
+export default function Balloon({balloon, onClick}) {
   return (
     <>
+    <div>
+    <h1 onClick={onClick}>{balloon}</h1>
+    </div>
+
+    <div>
     <h1>{balloon}</h1>
+    </div>
 
-    <h3>{status}</h3>
+    <div>
+    <h1>{balloon}</h1>
+    </div>
+
+    <div>
+    <h1>{balloon}</h1>
+    </div>
     </>
-
   )
 }

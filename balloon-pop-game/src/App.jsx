@@ -6,12 +6,7 @@ import './App.css'
 
 function App() {
   const [pop, setPops] = useState(0)
-  const [balloon, setBalloon] = useState(false)
 
-// USE STATE (VISIBILITY)
-const handleClick = () => {
-    setBalloon(!balloon)
-}
 // USE STATE (COUNTER)
   const resetGame = () => {
     setPops(-1);
@@ -28,46 +23,46 @@ const handleClick = () => {
       document.removeEventListener('click', numOfPops);
     };
   }, []);
-// MY ARRAY OF BALLOONS
-  let balloonList = [
-    {
-      balloonNum: "Balloon 1",
-      status: "Winner!"
-    },
-    {
-      balloonNum: "Balloon 2",
-      status: "Sorry :("
-    },
-    {
-      balloonNum: "Balloon 3",
-      status: "Sorry :("
-    },
-    {
-      balloonNum: "Balloon 4",
-      status: "Winner!"
-    }
-  ];
 
 // FUNCTION TO HIDE/REVEAL PRIZES ON CLICK ("POP" THE BALLOON)
+const [balloonVisible, setBalloonVisible] = useState(false);
+const handleClick = () => {
+  setBalloonVisible(!balloonVisible)
+}
 
 // MY CHILDREN COMPONENTS & BUTTONS
   return (
     <>
+      <div>
+      <Balloon onClick={handleClick} balloon={"balloon"}/>
+        {balloonVisible ? "Winner" : ""}
+      </div>
       <button onClick={resetGame}>Reset Pops!</button>
       <Counter label={"Pops"} count={pop} />
-      <Prizes />
-      <div>
-      {balloonList.map((balloon, index) => (
-      <Balloon
-        key={index}
-        balloon={balloon.balloonNum}
-        prize={balloon.prize}
-        status={balloon.status }
-      />
-      ))}
-      </div>
+      {/* <Prizes /> */}
+      
     </>
   );
 }
 
 export default App
+
+// // MY ARRAY OF BALLOONS
+// let balloonList = [
+//   {
+//     balloonNum: "Balloon 1",
+//     status: "Winner!"
+//   },
+//   {
+//     balloonNum: "Balloon 2",
+//     status: "Sorry :("
+//   },
+//   {
+//     balloonNum: "Balloon 3",
+//     status: "Sorry :("
+//   },
+//   {
+//     balloonNum: "Balloon 4",
+//     status: "Winner!"
+//   }
+// ];
