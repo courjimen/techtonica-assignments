@@ -1,18 +1,32 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Balloon from './components/Balloon'
+import Counter from './components/Counter'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [pop, setPops] = useState(0)
 
-  useState()
-  useState()
-  
+  const resetGame = () => {
+    setPops(-1);
+  }
+
+  useEffect(() => {
+    const numOfPops = () => {
+      setPops((prevPop) => prevPop + 1);
+    };
+
+    document.addEventListener('click', numOfPops);
+
+    return () => {
+      document.removeEventListener('click', numOfPops);
+    };
+  }, []);
   
   return (
     <>
-      <button>Click Me!</button>
+      <button onClick={resetGame}>Reset Pops!</button>
       <Balloon />
+      <Counter label={"Pops"} count={pop}/>
     </>
   )
 }

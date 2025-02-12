@@ -1,7 +1,10 @@
 import React from 'react'
 
-export default function Counter() {
+export default function Counter({label, count}) {
   return (
-    <div>Counter</div>
+    <div>
+        <h2>{label}</h2>
+        <span>{count}</span>
+    </div>
   )
 }
