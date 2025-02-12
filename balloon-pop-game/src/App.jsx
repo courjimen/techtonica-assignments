@@ -26,7 +26,7 @@ function App() {
   let balloonList = [
     {
       balloonNum: "Balloon 1",
-      prize: "",
+      prize: "./src/images/HannahHedgeHog.jpeg",
       status: "Winner!"
     },
     {
@@ -41,7 +41,7 @@ function App() {
     },
     {
       balloonNum: "Balloon 4",
-      prize: '',
+      prize: './src/images/Teddy-Tiger.jpeg',
       status: "Winner!"
     }
   ];
