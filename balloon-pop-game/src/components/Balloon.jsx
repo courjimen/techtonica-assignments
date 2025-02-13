@@ -1,18 +1,16 @@
 import React from 'react'
 
-export default function Balloon({ id, message }) {
-  const [display, setDisplay] = React.useState(id);
-  console.log({id, message});
-
+export default function Balloon({ id, message, display, onClick }) {
+  // console.log({id, message});
+  console.log({onClick})
   const handleClick = () => {
     console.log("display: ", display);
     console.log("message: ", message);
-    // if(display === id){
-    //   setDisplay(message);
-    // }
+    if(display === id){
+      setDisplay(message)
+      onClick();
+    }
   }
-
-// .addEventListener('click')
 
   return (
     <div
@@ -22,7 +20,7 @@ export default function Balloon({ id, message }) {
             width: "100px",
             borderRadius: "50%",
             border:"2px solid black"}}>
-      <h3>{id}</h3>
+      <h3>{display}</h3>
     </div>
   )
 }
