@@ -13,7 +13,10 @@ function App() {
 
 
   return (
-     balloons.map((balloon) => <Balloon balloon={balloon.id} message={balloon.message}/>)
+     balloons.map((balloon) => <Balloon
+                                  key={balloon.id}
+                                  id={balloon.id}
+                                  message={balloon.message}/>)
   )
 } 
 
