@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react'
 import Balloon from './components/Balloon'
 import Counter from './components/Counter'
+import Balloon2 from './components/Balloon2'
+import Balloon3 from './components/Balloon3'
+import Balloon4 from './components/Balloon4'
 import Prizes from './components/Prizes'
 import './App.css'
 
@@ -30,13 +33,44 @@ const handleClick = () => {
   setBalloonVisible(!balloonVisible)
 }
 
+const [balloon2Visible, setBalloon2Visible] = useState(false);
+const handleClick2 = () => {
+  setBalloon2Visible(!balloon2Visible)
+}
+
+const [balloon3Visible, setBalloon3Visible] = useState(false);
+const handleClick3 = () => {
+  setBalloon3Visible(!balloon3Visible)
+}
+
+const [balloon4Visible, setBalloon4Visible] = useState(false);
+const handleClick4 = () => {
+  setBalloon4Visible(!balloon4Visible)
+}
+
 // MY CHILDREN COMPONENTS & BUTTONS
   return (
     <>
       <div>
-      <Balloon onClick={handleClick} balloon={"balloon"}/>
-        {balloonVisible ? "Winner" : ""}
+      <Balloon onClick={handleClick} balloon={"balloon 1"}/>
+        {balloonVisible ? "Winner!" : ""}
       </div>
+
+      <div>
+      <Balloon2 onClick={handleClick2} balloon={"balloon 2"}/>
+        {balloon2Visible ? "Winner!" : ""}
+      </div>
+
+      <div>
+      <Balloon3 onClick={handleClick3} balloon={"balloon 3"}/>
+        {balloon3Visible ? "Try Again :(" : ""}
+      </div>
+
+      <div>
+      <Balloon4 onClick={handleClick4} balloon={"balloon 4"}/>
+        {balloon4Visible ? "Try again :(" : ""}
+      </div>
+
       <button onClick={resetGame}>Reset Pops!</button>
       <Counter label={"Pops"} count={pop} />
       {/* <Prizes /> */}
