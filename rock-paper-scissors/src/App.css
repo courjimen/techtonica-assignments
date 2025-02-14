@@ -1,12 +1,12 @@
 :root {
-  --primary: rgb(10, 247, 188);
+  --primary: rgb(190, 235, 249);
   --primary-dark: rgb(239, 206, 230);
   --primary-light: rgb(238, 141, 224);
   --primary-text: rgb(11, 11, 11);
 }
 
 html {
-  background-color: rgb(11, 10, 11);
+  background-color: rgb(190, 235, 249);
 }
 
 h1 {
