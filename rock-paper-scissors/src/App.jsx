@@ -21,10 +21,10 @@ function calculateWinner(action1, action2) {
   } else if (actions[action1] === action2) {
     return -1;
   }
-
-//This accounts for bugs in the code.
   return null;
 }
+
+
 
 function ActionIcon({ action, ...props }) {
   const icons = {
@@ -56,12 +56,24 @@ function ActionButton({ action = "rock", handlePlay }) {
     </button>
   )
 }
+function ShowWinner({winner = 0}) {
+  const text = {
+    "-1": "Winner 🎉",
+    0: "Tied!",
+    1: "Sorry, you lost 😢"
+  };
+
+  return (
+    <h2>{text[winner]}</h2>
+  )
+}
 function App() {
   const [playerAction, setPlayerAction] = useState("")
   const [comAction, setComAction] = useState("")
 
   const [playerScore, setPlayerScore] = useState(0);
   const [comScore, setComScore] = useState(0);
+  const [winner, setWinner] = useState(0);
 
   const handlePlay = (playSelected) => {
     setPlayerAction(playSelected)
@@ -69,10 +81,12 @@ function App() {
 
     setPlayerAction(playSelected);
     setComAction(newComAction);
-    const winner = calculateWinner(playSelected, newComAction);
-    if (winner === -1) {
+
+    const newWinner = calculateWinner(playSelected, newComAction);
+    setWinner(newWinner);
+    if (newWinner === -1) {
       setPlayerScore(playerScore + 1);
-    } else if (winner === 1) {
+    } else if (newWinner === 0) {
       setComScore(comScore + 1);
     }
   };
@@ -105,7 +119,7 @@ function App() {
           <ActionButton action="paper" handlePlay={handlePlay} />
           <ActionButton action="scissors" handlePlay={handlePlay} />
         </div>
-        <h2> Player 1 Wins</h2>
+        <ShowWinner winner={winner}/>
       </div>
 
 
