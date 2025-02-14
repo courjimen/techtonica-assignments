@@ -5,17 +5,16 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
+
+    <div className='center'>
+
       <div>
       <h1>ROCK PAPER SCISSORS</h1>
       </div>
 
-      <div>
-      <h2>Player: 0</h2>
-      </div>
-
-      <div>
-      <h2>Computer: 0 </h2>
+      <div className='container'>
+      <div className='player'><h2>Player: 0</h2></div>
+      <div className='player'><h2>Com: 0 </h2></div>
       </div>
 
       <div>
@@ -23,7 +22,7 @@ function App() {
       <button>Paper {count} </button>
       <button>Scissors {count} </button>
       </div>
-    </>
+    </div>
   )
 }
 
