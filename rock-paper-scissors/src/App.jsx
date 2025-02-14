@@ -12,7 +12,6 @@ function ActionIcon({action, ...props}) {
 return (
  <Icon {...props} />
 );
-
 }
 
 function Player({ name = "Player", score = 0, action = "rock"}) {
@@ -20,14 +19,22 @@ function Player({ name = "Player", score = 0, action = "rock"}) {
       <div className='player'>
           <h3 className='score'>{name} : {score}</h3>
           <div className='action'>
-              <ActionIcon action={action} size={60} />
+             {action  &&  <ActionIcon action={action} size={60} />}
           </div>
       </div>
   )
 }
 
+function ActionButton ({action="rock"}) {
+  return (
+    <button className='roundB'><ActionIcon action={action} size={20}/></button>
+  )
+}
 function App() {
-  const [count, setCount] = useState(0)
+  const [playerAction, setPlayerAction] = useState("")
+  const handlePlay = (playSelected) => {
+    setPlayerAction(playSelected)
+  }
 
   return (
     <>
@@ -42,21 +49,22 @@ function App() {
           <Player
             name="Player 1"
             score={0} 
-            action= "rock"/>
+            action= {playerAction}/>
 
           <Player
             name="Com"
             score={1} 
-            action= "rock"/>
+            action="paper"/>
         </div>
 
        
 
         <div>
-          <button className='roundB'><FaHandPaper size={20} /></button>
-          <button className='roundB'><FaHandRock size={20}/></button>
-          <button className='roundB'><FaHandScissors size={20}/></button>
+          <ActionButton action="rock" handlePlay={handlePlay}/>
+          <ActionButton action="paper" handlePlay={handlePlay} />
+          <ActionButton action="scissors" handlePlay={handlePlay}/>
         </div>
+        <h2> Player 1 Wins</h2>
       </div>
 
 
