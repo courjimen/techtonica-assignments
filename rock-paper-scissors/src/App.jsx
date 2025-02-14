@@ -56,7 +56,7 @@ function ActionButton({ action = "rock", handlePlay }) {
     </button>
   )
 }
-function ShowWinner({winner = 0}) {
+function ShowWinner({ winner = 0 }) {
   const text = {
     "-1": "Winner 🎉",
     0: "Tied!",
@@ -83,7 +83,7 @@ function App() {
     setComAction(newComAction);
 
     const newWinner = calculateWinner(playSelected, newComAction);
-    setWinner(newWinner);
+    setWinner(newWinner)
     if (newWinner === -1) {
       setPlayerScore(playerScore + 1);
     } else if (newWinner === 0) {
@@ -92,39 +92,28 @@ function App() {
   };
 
   return (
-    <>
-      <div className='center'>
+    <div className='center'>
+      <h1>ROCK PAPER SCISSORS</h1>
+      <div className='container'>
 
-        <div>
-          <h1>ROCK PAPER SCISSORS</h1>
-        </div>
+        <Player
+          name="Player 1"
+          score={playerScore}
+          action={playerAction} />
 
-        <div className='container'>
-
-          <Player
-            name="Player 1"
-            score={playerScore}
-            action={playerAction} />
-
-          <Player
-            name="Com"
-            score={comScore}
-            action={comAction} />
-        </div>
-
-
-
-        <div>
-          <ActionButton action="rock" handlePlay={handlePlay} />
-          <ActionButton action="paper" handlePlay={handlePlay} />
-          <ActionButton action="scissors" handlePlay={handlePlay} />
-        </div>
-        <ShowWinner winner={winner}/>
+        <Player
+          name="Com"
+          score={comScore}
+          action={comAction} />
       </div>
-
-
-
-    </>
+      
+      <div>
+        <ActionButton action="rock" handlePlay={handlePlay} />
+        <ActionButton action="paper" handlePlay={handlePlay} />
+        <ActionButton action="scissors" handlePlay={handlePlay} />
+      </div>
+      <ShowWinner winner={winner} />
+    </div>
   )
 }
 
