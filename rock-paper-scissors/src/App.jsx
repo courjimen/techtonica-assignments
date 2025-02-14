@@ -11,6 +11,8 @@ function randomAction() {
 
   const keys = Object.keys(actions);
   const index = Math.floor(Math.random() * keys.length);
+
+  return keys[index];
 }
 
 function ActionIcon({action, ...props}) {
@@ -47,9 +49,16 @@ function App() {
   const [playerAction, setPlayerAction] = useState("")
   const [comAction, setComAction] = useState("")
 
+const [playerScore, setPlayerScore] = useState(0);
+const [comScore, setComScore] = useState(0);
+
   const handlePlay = (playSelected) => {
     setPlayerAction(playSelected)
-  }
+    const newComAction = randomAction();
+
+    setPlayerAction(playSelected);
+    setComAction(newComAction);
+  };
 
   return (
     <>
@@ -63,12 +72,12 @@ function App() {
 
           <Player
             name="Player 1"
-            score={0} 
+            score={playerScore}
             action= {playerAction}/>
 
           <Player
             name="Com"
-            score={1} 
+            score={comScore} 
             action={comAction} />
         </div>
 
