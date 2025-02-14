@@ -1,13 +1,4 @@
 // import React from 'react'
+// import { FaHandPaper, FaHandRock, FaHandScissors } from 'react-icons/fa';
 
-// export default function ActionIcon({action}) {
-//     const icons = {
-//         rock: "rock",
-//         paper: "paper",
-//         scissors: "scissors"
-//     };
-//     const Icon = icons[action]
-//   return (
-//    <Icon />
-//   );
-// }
+// export default 

@@ -1,12 +1,10 @@
 :root {
-  --primary: pink;
+  --primary: rgb(238, 229, 237);
   --primary-dark: black;
   --primary-light: rgb(238, 141, 224);
   --primary-text: white;
 }
-html {
-  background-color: var(--primary);
-}
+
 
 h1 {
   font-size: 24px;
@@ -37,15 +35,22 @@ h2 {
   height: 120px;
   display: flex;
   flex-direction: column;
-  background-color: bisque;
+  background-color: var(--primary-light);
+  color: var(--primary-text);
 }
-
+.score {
+  padding: 1px;
+  font-size: small;
+  font-weight: bold;
+  background-color: var(--primary-dark);
+}
 .action {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+  color: var(--primary);
 }
 
 .roundB {
