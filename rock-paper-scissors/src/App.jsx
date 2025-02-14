@@ -2,6 +2,14 @@ import { useState } from 'react'
 import './App.css'
 import {FaHandScissors, FaHandPaper, FaHandRock} from 'react-icons/fa' 
 
+function randomAction() {
+  const actions = {
+    rock: "scissors",
+    paper: "rock",
+    scissors: "paper",
+  };
+}
+
 function ActionIcon({action, ...props}) {
   const icons = {
       rock: FaHandRock,
@@ -25,13 +33,17 @@ function Player({ name = "Player", score = 0, action = "rock"}) {
   )
 }
 
-function ActionButton ({action="rock"}) {
+function ActionButton ({action="rock", handlePlay}) {
   return (
-    <button className='roundB'><ActionIcon action={action} size={20}/></button>
+    <button className='roundB' onClick={() => handlePlay(action)}>
+      <ActionIcon action={action} size={20}/>
+      </button>
   )
 }
 function App() {
   const [playerAction, setPlayerAction] = useState("")
+  const [comAction, setComAction] = useState("")
+
   const handlePlay = (playSelected) => {
     setPlayerAction(playSelected)
   }
@@ -54,7 +66,7 @@ function App() {
           <Player
             name="Com"
             score={1} 
-            action="paper"/>
+            action={comAction} />
         </div>
 
        
