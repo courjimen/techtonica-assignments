@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import Input from './components/input';
 import { FaHandScissors, FaHandPaper, FaHandRock } from 'react-icons/fa'
 
 const actions = {
@@ -67,6 +68,7 @@ function ShowWinner({ winner = 0 }) {
     <h2>{text[winner]}</h2>
   )
 }
+
 function App() {
   const [playerAction, setPlayerAction] = useState("")
   const [comAction, setComAction] = useState("")
@@ -92,12 +94,23 @@ function App() {
   };
 
   return (
+    <>
+    
     <div className='center'>
       <h1>ROCK PAPER SCISSORS</h1>
-      <div className='container'>
 
+      {/* <Input
+        type="text"
+        value={inputValue}
+        onChange={handleInputChange}
+        placeholder="Enter text here"
+      /> */}
+
+      <p>Player name: {inputValue}</p>
+      <div className='container'>
+    
         <Player
-          name="Player 1"
+          name= "Player 1"
           score={playerScore}
           action={playerAction} />
 
@@ -114,6 +127,7 @@ function App() {
       </div>
       <ShowWinner winner={winner} />
     </div>
+    </>
   )
 }
 

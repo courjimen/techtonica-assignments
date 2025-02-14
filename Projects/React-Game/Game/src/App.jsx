@@ -15,7 +15,7 @@ function App() {
     if(headsOrTails === "heads"){
       setHeadsCount(headsCount+1);
     } else {
-      setTailsCount(tailsCount+1);
+      setTailsCount(tailsCount+1)
     }
     return headsOrTails;
   }
