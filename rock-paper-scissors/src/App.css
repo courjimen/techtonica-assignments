@@ -1,8 +1,8 @@
 :root {
-  --primary: rgb(238, 229, 237);
-  --primary-dark: black;
+  --primary: rgb(10, 247, 188);
+  --primary-dark: rgb(239, 206, 230);
   --primary-light: rgb(238, 141, 224);
-  --primary-text: white;
+  --primary-text: rgb(11, 11, 11);
 }
 
 
