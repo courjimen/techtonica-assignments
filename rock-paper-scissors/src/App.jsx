@@ -8,6 +8,9 @@ function randomAction() {
     paper: "rock",
     scissors: "paper",
   };
+
+  const keys = Object.keys(actions);
+  const index = Math.floor(Math.random() * keys.length);
 }
 
 function ActionIcon({action, ...props}) {
