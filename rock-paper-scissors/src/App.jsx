@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Player from './components/Player'
 
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -14,20 +15,29 @@ function App() {
         </div>
 
         <div className='container'>
-          <div className='player'><h2>Player: 0</h2></div>
-          <div className='player'><h2>Com: 0 </h2></div>
+
+          <Player
+            name="Player 1"
+            score={0} />
+
+          <Player
+            name="Com"
+            score={1} />
         </div>
 
+        {/* <div className='action'>
+        <ActionIcon action={action} />
+        </div> */}
+
         <div>
-          <button className='button'>Rock {count} </button>
-          <button>Paper {count} </button>
-          <button>Scissors {count} </button>
+          <button className='roundB'>FaHandRock {count} </button>
+          <button className='roundB'>FaHandPaper {count} </button>
+          <button className='roundB'>FaHandScissors {count} </button>
         </div>
       </div>
 
-      <Player 
-        name = "Player 1"
-        score = {0} />
+
+
     </>
   )
 }

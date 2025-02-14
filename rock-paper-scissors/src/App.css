@@ -1,4 +1,25 @@
+:root {
+  --primary: pink;
+  --primary-dark: black;
+  --primary-light: rgb(238, 141, 224);
+  --primary-text: white;
+}
+html {
+  background-color: var(--primary);
+}
 
+h1 {
+  font-size: 24px;
+  margin: 0;
+  background-color: var(--primary-dark);
+  color: var(--primary-text);
+  padding: 8px;
+}
+
+h2 {
+  font-size: 18px;
+  color: var(--primary-text);
+}
 .center {
   text-align: center;
 }
@@ -13,6 +34,31 @@
 .player {
   margin: 15px;
   width: 120px;
-  height: 100px;
+  height: 120px;
   display: flex;
+  flex-direction: column;
+  background-color: bisque;
+}
+
+.action {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.roundB {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  margin: 2px;
+  cursor: pointer;
+  background-color: var(--primary-dark);
+  color: var(--primary-text);
+}
+
+.roundB:hover {
+  background-color: var(--primary-light);
 }
