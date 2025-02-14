@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import {FaHandScissors, FaHandPaper, FaHandRock} from 'react-icons/fa' 
 
-function ActionIcon({action}) {
+function ActionIcon({action, ...props}) {
   const icons = {
       rock: FaHandRock,
       paper: FaHandPaper,
@@ -10,7 +10,7 @@ function ActionIcon({action}) {
   };
   const Icon = icons[action]
 return (
- <Icon />
+ <Icon {...props} />
 );
 
 }
