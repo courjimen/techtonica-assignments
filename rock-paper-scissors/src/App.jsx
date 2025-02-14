@@ -18,7 +18,7 @@ function App() {
       </div>
 
       <div>
-      <button>Rock {count} </button>
+      <button className='button'>Rock {count} </button>
       <button>Paper {count} </button>
       <button>Scissors {count} </button>
       </div>
