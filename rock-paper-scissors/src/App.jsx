@@ -2,17 +2,23 @@ import { useState } from 'react'
 import './App.css'
 import {FaHandScissors, FaHandPaper, FaHandRock} from 'react-icons/fa' 
 
-function randomAction() {
-  const actions = {
-    rock: "scissors",
-    paper: "rock",
-    scissors: "paper",
-  };
+const actions = {
+  rock: "scissors",
+  paper: "rock",
+  scissors: "paper",
+};
 
+function randomAction() {
   const keys = Object.keys(actions);
   const index = Math.floor(Math.random() * keys.length);
 
   return keys[index];
+}
+
+function calculateWinner(action1, action2) {
+  if(action1 === action2) {
+    return 0;
+  }
 }
 
 function ActionIcon({action, ...props}) {
