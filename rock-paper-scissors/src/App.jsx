@@ -1,5 +1,5 @@
-import { useState } from 'react'
 import './App.css'
+import { useState } from 'react'
 import { FaHandScissors, FaHandPaper, FaHandRock } from 'react-icons/fa'
 
 const actions = {
@@ -8,6 +8,7 @@ const actions = {
   scissors: "paper",
 };
 
+//ALLOWS COMPUTER TO RANDOMLY SELECT A PLAY
 function randomAction() {
   const keys = Object.keys(actions);
   const index = Math.floor(Math.random() * keys.length);
@@ -15,17 +16,19 @@ function randomAction() {
   return keys[index];
 }
 
+//CHECKS ARRAY TO SEE WHICH ACTION WON
 function calculateWinner(action1, action2) {
   if (action1 === action2) {
     return 0;
   } else if (actions[action1] === action2) {
     return -1;
   }
+
   return null;
 }
 
 
-
+//RENDERS ICON BASED ON PLAYER SELECTION
 function ActionIcon({ action, ...props }) {
   const icons = {
     rock: FaHandRock,
@@ -38,6 +41,7 @@ function ActionIcon({ action, ...props }) {
   );
 }
 
+//PLAYER COMPONENT
 function Player({ name = "Player", score = 0, action = "rock" }) {
   return (
     <div className='player'>
@@ -49,6 +53,7 @@ function Player({ name = "Player", score = 0, action = "rock" }) {
   )
 }
 
+//BUTTON TO SELECT ACTION
 function ActionButton({ action = "rock", handlePlay }) {
   return (
     <button className='roundB' onClick={() => handlePlay(action)}>
@@ -56,6 +61,8 @@ function ActionButton({ action = "rock", handlePlay }) {
     </button>
   )
 }
+
+//DISPLAYS WINNER, LOSER, OR TIE
 function ShowWinner({ winner = 0 }) {
   const text = {
     "-1": "Winner 🎉",
@@ -67,14 +74,19 @@ function ShowWinner({ winner = 0 }) {
     <h2>{text[winner]}</h2>
   )
 }
+
+//PARENT FUNCTION 
 function App() {
+  //TRACKS SELECTION OF PLAYER/COM
   const [playerAction, setPlayerAction] = useState("")
   const [comAction, setComAction] = useState("")
 
+  
   const [playerScore, setPlayerScore] = useState(0);
   const [comScore, setComScore] = useState(0);
   const [winner, setWinner] = useState(0);
 
+  //BUTTON FUNCTIONALILTY
   const handlePlay = (playSelected) => {
     setPlayerAction(playSelected)
     const newComAction = randomAction();
@@ -82,6 +94,7 @@ function App() {
     setPlayerAction(playSelected);
     setComAction(newComAction);
 
+    //TRACKS SCORE
     const newWinner = calculateWinner(playSelected, newComAction);
     setWinner(newWinner)
     if (newWinner === -1) {
