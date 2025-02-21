@@ -21,10 +21,6 @@ const BOOKS = [{
     "format": "Paperback"
 }]
 
-// app.get("/BOOKS", (req, res) => {
-// res.json(BOOKS);
-// });
-
 app.get('/BOOKS', async (req, res) => {
     try {
         const result = await db.query('SELECT * FROM series');
