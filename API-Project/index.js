@@ -1,8 +1,15 @@
 const express = require('express');
 const app = express();
-const db = require('./db');
+const bodyParser = require('body-parser';)
+const port = 3000;
+const db = require('./db')
 
-app.use(express.json());
+app.use(bodyParser.json())
+app.use(
+    bodyParser.urlencoded({
+        extended: true,
+    })
+)
 const BOOKS = [{
     "isbn": "0553120441",
     "title": "Harry Potter and the Sorcerer's Stone",
@@ -22,15 +29,16 @@ const BOOKS = [{
     "format": "Paperback"
 }]
 
-app.get('/BOOKS', async (req, res) => {
-    try {
-        const result = await db.query('SELECT * FROM series');
-        res.json(result.rows);
-    } catch (err) {
-        console.error(err);
-        res.status(500).send('Internal Server Error');
-    }
-});
+
+// app.get('/BOOKS', async (req, res) => {
+//     try {
+//         const result = await db.query('SELECT * FROM series');
+//         res.json(result.rows);
+//     } catch (err) {
+//         console.error(err);
+//         res.status(500).send('Internal Server Error');
+//     }
+// });
 
 app.post('/BOOKS', db.createBook)
 
