@@ -1,7 +1,9 @@
 const express = require('express');
 const app = express();
 const db = require('./db');
-
+/* import pg from 'pg';
+const db = new pg.Pool {}
+*/
 const BOOKS = [{
     "isbn": "0553120441",
     "title": "Harry Potter and the Sorcerer's Stone",
