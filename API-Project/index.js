@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const bodyParser = require('body-parser';)
+const bodyParser = require('body-parser');
 const port = 3000;
 const db = require('./db')
 
@@ -29,7 +29,9 @@ const BOOKS = [{
     "format": "Paperback"
 }]
 
-
+app.get('/BOOKS', (req, res) => {
+    res.json({ info: 'Node.js, Express, and Postgres API'})
+})
 // app.get('/BOOKS', async (req, res) => {
 //     try {
 //         const result = await db.query('SELECT * FROM series');
@@ -40,7 +42,7 @@ const BOOKS = [{
 //     }
 // });
 
-app.post('/BOOKS', db.createBook)
+// app.post('/BOOKS', db.createBook)
 
 
 app.listen(3000, () => {
