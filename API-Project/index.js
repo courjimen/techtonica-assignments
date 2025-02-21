@@ -1,14 +1,8 @@
 const express = require('express');
-const bodyParser = require('body-parser');
-
-var app = express();
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
-var urlencodedParser = bodyParser.urlencoded({extended: false});
+const app = express();
 const db = require('./db');
-/* import pg from 'pg';
-const db = new pg.Pool {}
-*/
+
+app.use(express.json());
 const BOOKS = [{
     "isbn": "0553120441",
     "title": "Harry Potter and the Sorcerer's Stone",
@@ -37,6 +31,9 @@ app.get('/BOOKS', async (req, res) => {
         res.status(500).send('Internal Server Error');
     }
 });
+
+app.post('/BOOKS', db.createBook)
+
 
 app.listen(3000, () => {
   console.log(`Server started on 3000`);
