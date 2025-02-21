@@ -1,5 +1,10 @@
 const express = require('express');
-const app = express();
+const bodyParser = require('body-parser');
+
+var app = express();
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+var urlencodedParser = bodyParser.urlencoded({extended: false});
 const db = require('./db');
 /* import pg from 'pg';
 const db = new pg.Pool {}
