@@ -9,6 +9,8 @@ This project is focused on building a REST API with Node and Express through you
 3. [Connect to my Database](#connect-to-my-database-in-postgresql)
 
 4. [Demo](#demo)
+- [Postman](#postman)
+- [PostgreSQL Mac Terminal](#mac-terminal)
 
 
 ## Installation
