@@ -15,12 +15,12 @@ This project is focused on building a REST API with Node and Express through you
 
 
 ## Installation
-Prior to jumping into my project make sure you have: 
+❗️ My instructions are specified for **MAC users.**  
+
+❗️ Prior to jumping into my project make sure you have: 
 
 - postgreSQL and Express installed on your local computer
 -  node and postman installed in your preferred code editor
-
-My instructions are specified for **MAC users.** 
 
 Here is a step-by-step guide to  you can installing [postgreSQL with homebrew](https://mcengkuru.medium.com/how-to-install-psql-on-your-mac-a-step-by-step-guide-with-troubleshooting-tips-ade65c441abf) from your command line terminal.
 
