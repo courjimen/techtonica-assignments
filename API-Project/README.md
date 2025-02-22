@@ -6,7 +6,9 @@ This project is focused on building a REST API with Node and Express through you
 
 2. [How to Run Project Locally](#run-project-locally)
 
-3. [Demo](#demo)
+3. [Connect to my Database](#connect-to-my-database-in-postgresql)
+
+4. [Demo](#demo)
 
 
 ## Installation
@@ -23,7 +25,7 @@ The code editor I used for this project was VS Code.
 - Follow these steps to [install Express](https://expressjs.com/en/starter/installing.html) on your VS Code terminal (they also provide documentation to install node.js)
 
 - I used the postman extension in VS Code. Navigate to the extensions tab on the right side of your VS Code Editor and search for Postman
-![](postman.png)
+![](images/postman.png)
 
 
 ✅ **You _MUST have these installed_** in order to run my project.
@@ -36,7 +38,7 @@ psql -U guest -d books
 ```
 It should respond with this:
 
-![](postgres.png)
+![](images/postgres.png)
 
 ## Run Project Locally
 _Please switch to the <INS>API BRANCH</INS> before cloning_
@@ -57,9 +59,14 @@ Open in VS Code
 ```bash
 code .
 ```
+Navigate to the db.js file and update the credentials to the following:
+
+![](images/Credentials.png)
+
 ✅ Open the link to see my database of books on localhost:3000/books
 
 ```bash
 npm run start
 ```
 ## Demo
+Now you should be able to modify my database from your command line (MAC Terminal) or Postman 🎉 Below are the four CRUD operations you can use: 
