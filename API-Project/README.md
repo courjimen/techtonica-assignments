@@ -96,23 +96,43 @@ Now you should be able to modify my database from your command line (MAC Termina
 _remember to mind capitalization and <ins>ALWAYS</ins> put a semicolon at the end of your postgreSQL command or it will not run_
 
 To Create a new book use the following command: 
+
 ```bash
-INSERT INTO series (ibsn, title, author, format) VALUES (01234, "insert_title", "insert_author", "insert_format");
+INSERT INTO series (ibsn, title, author, format) VALUES (01234, 'insert_title', 'insert_author', 'insert_format');
 ```
-It should display this:
+When you use the _SELECT * FROM series;_ command it should display this:
 
+![](images/TestTable.png)
 
-To Create a new book use the following command: 
+To display all your books use the following command: 
+
 ```bash
-npm run start
-```
-
-To Create a new book use the following command: 
-```bash
-npm run start
+SELECT * FROM series;
 ```
 
-To Create a new book use the following command: 
+To update an attribute of a book remember to use the _WHERE clause_ to ensure you update only the row with the content you want to change(title, author, etc.) or else it will update all the rows like so:
+
+- nowhere ❌ 
+
+![](images/nowhere.pnG)
+
+use the following command **with** the WHERE clause: 
+
 ```bash
-npm run start
+UPDATE series SET title='New Title', format='USED WHERE' WHERE id=2
 ```
+- with WHERE ✅
+
+![](/images/with-WHERE.png)
+
+I grabbed the row I wanted by ID but you could use whichever attributes you'd like. Check out this resource to learn more about the WHERE Clause 😊
+
+To delete a book use the following command: 
+
+```bash
+DELETE FROM series WHERE condition;
+```
+
+Similar to update I would replace condition with the id=insert_number and use that to delete the corresponding row.
+
+That's all folks 🎉 Thank you for checking out my work 🙌🏾
