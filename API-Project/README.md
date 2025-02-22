@@ -117,7 +117,7 @@ To update an attribute of a book remember to use the _WHERE clause_ to ensure yo
 
 - nowhere ❌ 
 
-![](images/nowhere.pnG)
+![](images/nowhere.png)
 
 use the following command **with** the WHERE clause: 
 
