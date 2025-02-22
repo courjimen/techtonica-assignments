@@ -126,7 +126,7 @@ UPDATE series SET title='New Title', format='USED WHERE' WHERE id=2
 ```
 - with WHERE ✅
 
-![](/images/with-WHERE.png)
+![](images/with-WHERE.png)
 
 I grabbed the row I wanted by ID but you could use whichever attributes you'd like. Check out this resource to learn more about the WHERE Clause 😊
 
