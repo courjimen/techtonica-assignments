@@ -122,7 +122,7 @@ To update an attribute of a book remember to use the _WHERE clause_ to ensure yo
 use the following command **with** the WHERE clause: 
 
 ```bash
-UPDATE series SET title='New Title', format='USED WHERE' WHERE id=2
+UPDATE series SET title='New Title', format='USED WHERE' WHERE id=2;
 ```
 - with WHERE ✅
 
