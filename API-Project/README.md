@@ -25,6 +25,7 @@ The code editor I used for this project was VS Code.
 - Follow these steps to [install Express](https://expressjs.com/en/starter/installing.html) on your VS Code terminal (they also provide documentation to install node.js)
 
 - I used the postman extension in VS Code. Navigate to the extensions tab on the right side of your VS Code Editor and search for Postman
+
 ![](images/postman.png)
 
 
@@ -39,6 +40,17 @@ psql -U guest -d books
 It should respond with this:
 
 ![](images/postgres.png)
+
+Now you can modify the date in my table: **series** Run this command to see what data I currently have
+
+```bash
+SELECT * FROM series;
+```
+
+It should display this within your terminal:
+
+![](images/Table.png)
+
 
 ## Run Project Locally
 _Please switch to the <INS>API BRANCH</INS> before cloning_
@@ -69,4 +81,38 @@ Navigate to the db.js file and update the credentials to the following:
 npm run start
 ```
 ## Demo
-Now you should be able to modify my database from your command line (MAC Terminal) or Postman 🎉 Below are the four CRUD operations you can use: 
+Now you should be able to modify my database from your command line (MAC Terminal) or Postman 🎉 Below are the four CRUD operations you can use to modify my database in Postman and your MAC Terminal: 
+
+### <ins>Postman</ins>
+**POST** 
+
+**GET**
+
+**PUT**
+
+**DELETE**
+
+### <ins>MAC Terminal</ins>
+_remember to mind capitalization and <ins>ALWAYS</ins> put a semicolon at the end of your postgreSQL command or it will not run_
+
+To Create a new book use the following command: 
+```bash
+INSERT INTO series (ibsn, title, author, format) VALUES (01234, "insert_title", "insert_author", "insert_format");
+```
+It should display this:
+
+
+To Create a new book use the following command: 
+```bash
+npm run start
+```
+
+To Create a new book use the following command: 
+```bash
+npm run start
+```
+
+To Create a new book use the following command: 
+```bash
+npm run start
+```
