@@ -1,5 +1,2 @@
-INSERT INSTRUCTIONS ON
--How to connect database to local computer (MAC edition)
--How to link postgressql
--How to install postman extension in vs code (or use postman online server)
--how to run node.js to display data
+# API Project
+This project is focused on building a REST API with Node and Express through your backend server. We will be organizing data by following CRUD (Create Read Update Delete) operations and utilizing postgresSQL to connect to local databases.
