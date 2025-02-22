@@ -19,7 +19,12 @@ My instructions are specified for **MAC users.**
 
 Here is a step-by-step guide to  you can installing [postgreSQL with homebrew](https://mcengkuru.medium.com/how-to-install-psql-on-your-mac-a-step-by-step-guide-with-troubleshooting-tips-ade65c441abf) from your command line terminal.
 
-The code editor I used for this project was VS Code. Follow these steps to [install Express](https://expressjs.com/en/starter/installing.html) on your VS Code terminal (they also provide documentation to install node.js)
+The code editor I used for this project was VS Code. 
+- Follow these steps to [install Express](https://expressjs.com/en/starter/installing.html) on your VS Code terminal (they also provide documentation to install node.js)
+
+- I used the postman extension in VS Code. Navigate to the extensions tab on the right side of your VS Code Editor and search for Postman
+![](postman.png)
+
 
 ✅ **You _MUST have these installed_** in order to run my project.
 
@@ -52,7 +57,7 @@ Open in VS Code
 ```bash
 code .
 ```
-✅ Run the following to see on localhost:3000/books
+✅ Open the link to see my database of books on localhost:3000/books
 
 ```bash
 npm run start
