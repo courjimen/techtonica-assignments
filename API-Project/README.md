@@ -61,7 +61,7 @@ _Please switch to the <INS>API BRANCH</INS> before cloning_
 Clone my project
 
 ```bash
-git clone https://github.com/courjimen/techtonica-assignments.git
+git clone https://github.com/courjimen/techtonica-assignments/tree/API
 ```
 
 Go to the project directory
