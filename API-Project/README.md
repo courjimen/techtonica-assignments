@@ -89,9 +89,15 @@ Now you should be able to modify my database from your command line (MAC Termina
 ### <ins>Postman</ins>
 For all the following methods, open the postman vs code extension and select new HTTP Request. When it opens it will be set to GET and you will need to insert this url: http://localhost:3000/books
 
+**GET**
+
+Select GET from the color coded tab dropdown and insert this url: http://localhost:3000/books the send the request
+
+![](images/GET.png)
+
 **POST** 
 
-1. Select the POST from the color coded tab dropdown 
+1. Select POST from the color coded tab dropdown 
 2. Select the tab dropdown labelled "params" and select "body" 
 3. Click the "x-www-form-urlencoded" option
 4. Enter the following four keys along with their values: <br>
@@ -101,13 +107,22 @@ For all the following methods, open the postman vs code extension and select new
     -format
 5. Send the request and in the response section you will be able to view your new data in postman and when you refresh your local host
 
-**GET**
-
-Select the POST from the color coded tab dropdown and insert this url: http://localhost:3000/books the send the request
-
 **PUT**
+1. Select PUT from the color coded tab dropdown and you will need to insert this url: http://localhost:3000/books/ID_NUMBER
+2. Replace ID_NUMBER with the ID number of the row you want to update
+3. Select the tab dropdown labelled "params" and select "body"
+4. Click the "x-www-form-urlencoded" option
+5. Enter the following four keys along with their updated values: <br>
+    -ibsn   <br>
+    -title  <br>
+    -author <br>
+    -format
+6. Send the request and in the response section you will be able to view your new data in postman and when you refresh your local host
 
 **DELETE**
+1. Select DELETE from the color coded tab dropdown and you will need to insert this url: http://localhost:3000/books/ID_NUMBER
+2. Replace ID_NUMBER with the ID number of the row you want to delete
+3. Send the request and in the response section you will be able to view your new data in postman and when you refresh your local host
 
 ### <ins>MAC Terminal</ins>
 _remember to mind capitalization and <ins>ALWAYS</ins> put a semicolon at the end of your postgreSQL command or it will not run_
