@@ -87,9 +87,23 @@ npm run start
 Now you should be able to modify my database from your command line (MAC Terminal) or Postman 🎉 Below are the four CRUD operations you can use to modify my database in Postman and your MAC Terminal: 
 
 ### <ins>Postman</ins>
+For all the following methods, open the postman vs code extension and select new HTTP Request. When it opens it will be set to GET and you will need to insert this url: http://localhost:3000/books
+
 **POST** 
 
+1. Select the POST from the color coded tab dropdown 
+2. Select the tab dropdown labelled "params" and select "body" 
+3. Click the "x-www-form-urlencoded" option
+4. Enter the following four keys along with their values: <br>
+    -ibsn   <br>
+    -title  <br>
+    -author <br>
+    -format
+5. Send the request and in the response section you will be able to view your new data in postman and when you refresh your local host
+
 **GET**
+
+Select the POST from the color coded tab dropdown and insert this url: http://localhost:3000/books the send the request
 
 **PUT**
 
