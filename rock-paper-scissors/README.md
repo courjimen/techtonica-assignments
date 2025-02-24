@@ -34,4 +34,4 @@ Once you follow the local host link it should display this:
 |--|--| 
 |![](rockscissors.png)|![](scissors.png)
 
-Then you can click whichever symbol you'd like to play and it will track your score and let you know if you've won or tied with the computer like this:
+Then you can click whichever symbol you'd like to play and it will track your score and let you know if you've won or tied with the computer.
