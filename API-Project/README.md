@@ -91,7 +91,8 @@ For all the following methods, open the postman vs code extension and select new
 
 **GET**
 
-Select GET from the color coded tab dropdown and insert this url: http://localhost:3000/books the send the request
+1. Select GET from the color coded tab dropdown and insert this url: http://localhost:3000/books 
+2. Send the request
 
 ![](images/GET.png)
 
@@ -105,7 +106,7 @@ Select GET from the color coded tab dropdown and insert this url: http://localho
     -title  <br>
     -author <br>
     -format
-5. Send the request and in the response section you will be able to view your new data in postman and when you refresh your local host
+5. Send the request. You can view your new data in the response section and when you refresh your local host.
 
 **PUT**
 1. Select PUT from the color coded tab dropdown and you will need to insert this url: http://localhost:3000/books/ID_NUMBER
@@ -117,12 +118,12 @@ Select GET from the color coded tab dropdown and insert this url: http://localho
     -title  <br>
     -author <br>
     -format
-6. Send the request and in the response section you will be able to view your new data in postman and when you refresh your local host
+6.  Send the request. You can view your new data in the response section and when you refresh your local host.
 
 **DELETE**
 1. Select DELETE from the color coded tab dropdown and you will need to insert this url: http://localhost:3000/books/ID_NUMBER
 2. Replace ID_NUMBER with the ID number of the row you want to delete
-3. Send the request and in the response section you will be able to view your new data in postman and when you refresh your local host
+3.  Send the request. You can view your new data in the response section and when you refresh your local host.
 
 ### <ins>MAC Terminal</ins>
 _remember to mind capitalization and <ins>ALWAYS</ins> put a semicolon at the end of your postgreSQL command or it will not run_
