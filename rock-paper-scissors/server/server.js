@@ -65,7 +65,24 @@ app.patch('/players/:playerName/score', async (req, res) => {
         res.sendStatus(500);
     }
 });
+
 //delete a player
+app.delete('/player/:playerName', async (req, res) => {
+    try {
+        const playerName = req.params.playerName;
+        const deletePlayer = await pool.query('DELETE FROM score WHERE player_name = $1', [playerName]);
+
+        if (deletePlayer.rowCount > 0) {
+            res.status(200).json({ message: 'Player deleted' });
+        } else {
+            res.status(404).json({ message: "Player not found" })
+        }
+
+    } catch (err) {
+        console.error('Error deleting player:', err)
+        res.status(500).json({ error: 'Internal server error' })
+    }
+})
 
 app.listen(port, () => {
     console.log(`Server started on ${port}`);
