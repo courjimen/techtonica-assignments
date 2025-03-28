@@ -1,0 +1,37 @@
+--Step 1--
+CREATE DATABASE players;
+
+--Step 2--
+\c players;
+
+--Step 3--
+CREATE TABLE score (
+    player_id SERIAL PRIMARY KEY,
+    player_name TEXT UNIQUE NOT NULL,
+    player_score INT DEFAULT 0,
+);
+
+--Step 4--
+INSERT INTO score (player_name, score) VALUES 
+('Bon Bon', 5),
+('Cour', 3),
+('Tre',7);
+
+--Step 5 Rankings--
+CREATE TABLE leaderboard (
+    rank INT PRIMARY KEY,
+    player_name TEXT NOT NULL,
+    player_score INT NOT NULL
+);
+
+--Step 6 SCORE BOARD--
+INSERT INTO leaderboard (rank, player_name, player_score)
+SELECT 
+    RANK() OVER (ORDER BY player_score DESC) AS rank,
+    player_name,
+    player_score
+FROM score
+ORDER BY player_score DESC
+LIMIT 10;
+SELECT * FROM leaderboard;
+
