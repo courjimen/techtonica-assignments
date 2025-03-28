@@ -1,6 +1,19 @@
 # Let's Play Rock, Paper, Scissors
 This game is a simple rock, paper, scissors. Click the symbol for what you want to play and try your luck against the computer! Instructions on how to play and a demo are below.
 
+## Table of Contents
+1. [Installation Instructions](#installation)
+2. [Game Instructions](#how-to-play)
+3. [Demo](#demo)
+
+## Installation
+1. Installing data from db.sql
+- open postgres on your terminal 
+```bash
+psql postgres
+```
+- copy paste the contents from the db.sql file to create your tables
+
 ## How to Play
 _Please switch to the <INS>Game Branch</INS> before cloning_
 
