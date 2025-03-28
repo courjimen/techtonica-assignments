@@ -67,7 +67,7 @@ app.patch('/players/:playerName/score', async (req, res) => {
 });
 
 //delete a player
-app.delete('/player/:playerName', async (req, res) => {
+app.delete('/players/:playerName', async (req, res) => {
     try {
         const playerName = req.params.playerName;
         const deletePlayer = await pool.query('DELETE FROM score WHERE player_name = $1', [playerName]);
