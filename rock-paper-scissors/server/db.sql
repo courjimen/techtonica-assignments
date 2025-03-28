@@ -8,16 +8,16 @@ CREATE DATABASE players;
 CREATE TABLE score (
     player_id SERIAL PRIMARY KEY,
     player_name TEXT UNIQUE NOT NULL,
-    player_score INT DEFAULT 0,
+    player_score INT DEFAULT 0
 );
 
 --Step 4--
-INSERT INTO score (player_name, score) VALUES 
+INSERT INTO score (player_name, player_score) VALUES 
 ('Bon Bon', 5),
 ('Cour', 3),
 ('Tre',7);
 
---Step 5 Rankings--
+--Step 5 Rankings Table--
 CREATE TABLE leaderboard (
     rank INT PRIMARY KEY,
     player_name TEXT NOT NULL,
