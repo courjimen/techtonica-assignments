@@ -3,7 +3,7 @@ import pg from 'pg';
 // connect to database with your credentials
 const pool = new pg.Pool({
     user: 'tpl1122_12',
-    host: '/tmp',
+    host: 'localhost',
     database: 'players',
     // password: 'your_password',
     port: 5432,
