@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 //fetch leaderboard
-app.get('/scores', async (req, res) => {
+app.get('/players', async (req, res) => {
     try{
         const result = await pool.query('SELECT * FROM leaderboard')
         res.json(result.rows)
@@ -18,8 +18,19 @@ app.get('/scores', async (req, res) => {
         res.sendStatus(500)
     }
 })
-//create new player
 
+//create new player
+app.post('/players', async (req, res) => {
+
+    const { player_name, player_score }  = req.body
+
+    try {
+        const result = await pool.query('INSERT INTO score (player_name, player_score) VALUES ($1, $2) RETURNING *', [player_name, player_score])
+        res.json(result.rows[0])
+    } catch (err) {
+        console.error('Error adding player: ', err);
+        res.sendStatus(500)
+}})
 //update player score
 
 //delete a player

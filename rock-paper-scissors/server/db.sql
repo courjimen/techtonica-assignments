@@ -24,7 +24,7 @@ CREATE TABLE leaderboard (
     player_score INT NOT NULL
 );
 
---Step 6 SCORE BOARD--
+--Step 6 SCOREBOARD--
 INSERT INTO leaderboard (rank, player_name, player_score)
 SELECT 
     RANK() OVER (ORDER BY player_score DESC) AS rank,
@@ -33,5 +33,28 @@ SELECT
 FROM score
 ORDER BY player_score DESC
 LIMIT 10;
-SELECT * FROM leaderboard;
 
+--FUNCTION TO UPDATE SCOREBOARD--
+CREATE OR REPLACE FUNCTION update_leaderboard()
+RETURNS TRIGGER AS $$
+BEGIN
+    DELETE FROM leaderboard;
+    INSERT INTO leaderboard (rank, player_name, player_score)
+    SELECT
+        RANK() OVER (ORDER BY player_score DESC) AS rank,
+        player_name,
+        player_score
+    FROM score
+    ORDER BY player_score DESC
+    LIMIT 10;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+--TRIGGER UPDATES LEADERBOARD--
+CREATE TRIGGER score_updated
+AFTER INSERT OR UPDATE OR DELETE ON score
+FOR EACH STATEMENT
+EXECUTE FUNCTION update_leaderboard();
+
+SELECT * FROM leaderboard;
