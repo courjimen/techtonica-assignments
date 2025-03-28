@@ -20,6 +20,8 @@ function PlayerForm({ newPlayer }) {
             />
             <button type='submit'>Start Game</button>
         </form>
+
+        
     </div>
   )
 }

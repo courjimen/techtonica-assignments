@@ -4,6 +4,8 @@ function Scoreboard({ playerName, playerScore }) {
     const [scoreboard, setScoreBoard] = useState([])
     const [error, setError] = useState(null)
     const [loading, setLoading] = useState(true)
+    const [searchName, setSearchName] = useState('')
+    const [searchResults, setSearchResults] = useState([])
 
     useEffect(() => {
         async function fetchScoreboard() {
@@ -26,6 +28,24 @@ function Scoreboard({ playerName, playerScore }) {
         fetchScoreboard()
     }, [])
 
+    const handleSearch = async () => {
+        setError(null)
+        setLoading(true)
+        try {
+            const res = await fetch(`http://localhost:3000/players/search/${searchName}`)
+            if (res.ok) {
+                const data = await res.json()
+                setSearchResults(data)
+            } else {
+                setError('Failed to search players')
+            }
+        } catch (err) {
+            setError('Error searching players: ', err)
+        } finally {
+            setLoading(false)
+        }
+    }
+
     if (loading) {
         return <div>Loading scoreboard...</div>;
     }
@@ -39,13 +59,30 @@ function Scoreboard({ playerName, playerScore }) {
             <h2>Game Over!</h2>
             <p>{playerName}'s Final Score: {playerScore}</p>
 
+            <div>
+
+        <input
+          type="text"
+          value={searchName}
+          onChange={(e) => setSearchName(e.target.value)}
+          placeholder="Search Player"
+        />
+        <button onClick={handleSearch}>Search</button>
+      </div>
+
             <h2>Scoreboard</h2>
             <ul>
-                {scoreboard.map((item) => (
+                {searchResults.length > 0 ? (searchResults.map((item) => (
+                    <li key={item.player_id}>
+                    {item.player_name}: {item.player_score}
+                    </li>
+                )) 
+            ) : (scoreboard.map((item) => (
                     <li key={item.rank}>
                         {item.player_name}: {item.player_score} (Rank: {item.rank})
                     </li>
-                ))}
+                ))
+            )}
             </ul>
         </div>
     )

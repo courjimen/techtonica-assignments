@@ -84,6 +84,18 @@ app.delete('/players/:playerName', async (req, res) => {
     }
 })
 
+// Search for a player by name
+app.get('/players/search/:playerName', async (req, res) => {
+    try {
+        const { playerName } = req.params;
+        const result = await pool.query('SELECT * FROM score WHERE player_name ILIKE $1', [`%${playerName}%`]); //ILIKE for case-insensitive search
+        res.json(result.rows);
+    } catch (err) {
+        console.error('Error searching for player:', err);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
 app.listen(port, () => {
     console.log(`Server started on ${port}`);
 })

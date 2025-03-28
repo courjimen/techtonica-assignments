@@ -103,10 +103,10 @@ function App() {
     if (round + 1 === 3) {
       setGameOver(true)
       try {
-        await fetch('/players', {
+        await fetch('http://localhost:3000/players', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ playerName, player_score: playerScore }),
+          body: JSON.stringify({ player_name: playerName, player_score: playerScore }),
         })
       } catch (err) {
         console.error('Error retrieving scores:', err)
