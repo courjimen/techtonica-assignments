@@ -8,15 +8,6 @@ function Scoreboard({ playerName, playerScore }) {
     const [searchResults, setSearchResults] = useState([])
 
     useEffect(() => {
-
-        const socket = socketIOClient(ENDPOINT);
-
-        socket.on('leaderboardUpdate', (data) => {
-            console.log("Received leaderboard update:", data);
-            setScoreBoard(data);
-            setLoading(false);
-        });
-        
         async function fetchScoreboard() {
             setError(null)
             setLoading(true)

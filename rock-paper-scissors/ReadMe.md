@@ -20,7 +20,7 @@ This game is a simple rock, paper, scissors. Click the symbol for what you want 
 Please have these installed to run this project
 - [x] Postgresql
 - [x] Npm
-- VS Code Editor _(recommended but optional)_
+- [] VS Code Editor _(recommended but optional)_
 
 ## How to Clone
 _Please open the <INS>rock-paper-scissors</INS> folder in your terminal_
@@ -39,14 +39,13 @@ code .
 ```
 
 ## Installation
-1. Open my project in your code editor (I use VS code) and do the following commands:
-
+Open my project and do the following commands:
+    
 - Client folder
 ```bash
 cd client
 npm install react-icons
 ```
-
 - Server folder
 ```bash
 cd server
@@ -56,7 +55,7 @@ npm install express cors nodemon pg
 ```bash
 npm install concurrently --save-dev
 ```
-2. Installing data from db.sql
+**Installing data from db.sql**
 - Open postgres on your terminal 
 
 ```bash
@@ -66,27 +65,42 @@ psql postgres
 
 ## Game Play Instructions
 
-* **Player Input:**
-    * Players enter their name to start the game and choose "Rock," "Paper," or "Scissors" using buttons.
-* **Computer Opponent:**
-    * The computer randomly selects "Rock," "Paper," or "Scissors" each round.
-* **Round Logic:**
-    * The game determines the winner of each round based on the classic Rock Paper Scissors rules.
-    * Player and computer scores are tracked.
-* **Game Length:**
-    * The game consists of 10 rounds.
-* **Game Over:**
-    * After 10 rounds, the game ends.
-    * The overall winner is displayed.
-    * The players score is sent to a leaderboard.
-* **Leaderboard:**
-    * The game displays a leaderboard showing player names and scores.
-    * Players can search the leaderboard by player name.
+**Player Input:**
+Players enter their name to start the game and choose "Rock," "Paper," or "Scissors" using buttons.
+
+**Computer Opponent:**
+The computer randomly selects "Rock," "Paper," or "Scissors" each round.
+
+**Round Logic:**
+The game determines the winner of each round based on the classic Rock Paper Scissors rules. Player and computer scores are tracked.
+
+**Game Length:**
+The game consists of 10 rounds.
+
+**Game Over:**
+After 10 rounds, the game ends. The overall winner is displayed. The players score is sent to a leaderboard.
+
+**Leaderboard:**
+The game displays a leaderboard showing player names and scores. Players can search the leaderboard by player name.
 
 ## Demo
-Here is what you can expect to see:
-Home page:
+Here is what you can expect to see!
 
-Game page:
+**Home page**:
+Here you will enter your name
+![](/client/images/home.png)
 
-Winner Scoreboard:
+**Game page:**
+You click the buttons to play and it tracks your score against the computer
+![](/client/images/game.png)
+
+**Winner Scoreboard:**
+This page displays your score and the rankings for other players _(highlighting the top 3)_
+![](/client/images/scores.png)
+
+**Search Function:**
+This allows you to search your score or another players score
+
+| Example 1 |Example 2|
+| :-----------------: | :-----------------: |
+| ![](/client/images/search.png) | ![](/client/images/search2.png) |

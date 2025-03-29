@@ -96,7 +96,6 @@ app.get('/players/search/:playerName', async (req, res) => {
     }
 });
 
-
 app.listen(port, () => {
     console.log(`Server started on ${port}`);
 })
