@@ -88,16 +88,19 @@ Here is what you can expect to see!
 
 **Home page**:
 Here you will enter your name
+
 ![](/client/images/home.png)
 
 **Game page:**
 You click the buttons to play and it tracks your score against the computer
+
 ![](/client/images/game.png)
 
 ![](/client/images/scissors.png)
 
 **Winner Scoreboard:**
 This page displays your score and the rankings for other players _(highlighting the top 3)_
+
 ![](/client/images/scores.png)
 
 **Search Function:**
