@@ -1,0 +1,109 @@
+:root {
+  --primary: rgb(190, 235, 249);
+  --primary-dark: rgb(239, 206, 230);
+  --primary-light: rgb(238, 141, 224);
+  --primary-text: rgb(11, 11, 11);
+}
+
+html {
+  background-color: rgb(190, 235, 249);
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+  background-color: var(--primary-dark);
+  color: var(--primary-text);
+  padding: 8px;
+}
+
+h2 {
+  font-size: 18px;
+  color: var(--primary-text);
+}
+.center {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  vertical-align: center;
+}
+
+.player {
+  margin: 15px;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-light);
+  color: var(--primary-text);
+}
+.score {
+  padding: 1px;
+  font-size: small;
+  font-weight: bold;
+  background-color: var(--primary-dark);
+}
+.action {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  color: var(--primary);
+}
+
+.roundB {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  margin: 2px;
+  cursor: pointer;
+  background-color: var(--primary-dark);
+  color: var(--primary-text);
+}
+
+.roundB:hover {
+  background-color: var(--primary-light);
+}
+
+.scoreboard ul {
+  list-style: none; 
+  padding-left: 0; 
+}
+
+.scoreboard li {
+  position: relative; 
+  padding-left: 30px; 
+  margin-bottom: 5px; 
+}
+
+.scoreboard li::before {
+  content: attr(data-rank); 
+  position: absolute;
+  left: 0;
+  width: 25px; 
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+}
+
+.player-name {
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+.scoreboard li:nth-child(1) .player-name {
+  background-color: gold;
+}
+
+.scoreboard li:nth-child(2) .player-name {
+  background-color: silver;
+}
+
+.scoreboard li:nth-child(3) .player-name {
+  background-color: #cd7f32;
+}
