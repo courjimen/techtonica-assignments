@@ -70,3 +70,40 @@ h2 {
 .roundB:hover {
   background-color: var(--primary-light);
 }
+
+.scoreboard ul {
+  list-style: none; 
+  padding-left: 0; 
+}
+
+.scoreboard li {
+  position: relative; 
+  padding-left: 30px; 
+  margin-bottom: 5px; 
+}
+
+.scoreboard li::before {
+  content: attr(data-rank); 
+  position: absolute;
+  left: 0;
+  width: 25px; 
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+}
+
+.player-name {
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+.scoreboard li:nth-child(1) .player-name {
+  background-color: gold;
+}
+
+.scoreboard li:nth-child(2) .player-name {
+  background-color: silver;
+}
+
+.scoreboard li:nth-child(3) .player-name {
+  background-color: #cd7f32;
+}

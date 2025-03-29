@@ -72,14 +72,14 @@ function Scoreboard({ playerName, playerScore }) {
 
             <h2>Scoreboard</h2>
             <ul>
-                {searchResults.length > 0 ? (searchResults.map((item) => (
+            {searchResults.length > 0 ? (searchResults.map((item) => (
                     <li key={item.player_id}>
                     {item.player_name}: {item.player_score}
                     </li>
                 )) 
             ) : (scoreboard.map((item) => (
-                    <li key={item.rank}>
-                        {item.player_name}: {item.player_score} (Rank: {item.rank})
+                    <li key={item.rank} data-rank={item.rank}>
+                       <span className='player-name'>{item.player_name}: {item.player_score}</span>
                     </li>
                 ))
             )}

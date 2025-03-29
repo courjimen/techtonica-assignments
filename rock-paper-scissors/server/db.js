@@ -4,7 +4,7 @@ import pg from 'pg';
 const pool = new pg.Pool({
     user: 'tpl1122_12',
     host: 'localhost',
-    database: 'players',
+    database: 'player',
     // password: 'your_password',
     port: 5432,
 });

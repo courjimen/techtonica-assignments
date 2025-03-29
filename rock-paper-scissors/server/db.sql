@@ -1,8 +1,8 @@
 --Step 1--
-CREATE DATABASE players;
+CREATE DATABASE player;
 
 --Step 2--
-\c players;
+\c player;
 
 --Step 3--
 CREATE TABLE score (
@@ -19,19 +19,23 @@ INSERT INTO score (player_name, player_score) VALUES
 
 --Step 5 Rankings Table--
 CREATE TABLE leaderboard (
-    rank INT PRIMARY KEY,
+    leaderboard_id SERIAL PRIMARY KEY,
+    rank INT NOT NULL,
     player_name TEXT NOT NULL,
-    player_score INT NOT NULL
+    player_score INT NOT NULL,
+    UNIQUE(rank)
 );
 
 --Step 6 SCOREBOARD--
 INSERT INTO leaderboard (rank, player_name, player_score)
-SELECT 
-    RANK() OVER (ORDER BY player_score DESC) AS rank,
+ SELECT
+    DENSE_RANK() OVER (ORDER BY player_score DESC) AS rank,
     player_name,
     player_score
-FROM score
-ORDER BY player_score DESC
+FROM
+    score
+ORDER BY
+    player_score DESC;
 LIMIT 10;
 
 --FUNCTION TO UPDATE SCOREBOARD--
@@ -41,7 +45,7 @@ BEGIN
     DELETE FROM leaderboard;
     INSERT INTO leaderboard (rank, player_name, player_score)
     SELECT
-        RANK() OVER (ORDER BY player_score DESC) AS rank,
+        DENSE_RANK() OVER (ORDER BY player_score DESC) AS rank,
         player_name,
         player_score
     FROM score
