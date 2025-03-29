@@ -23,7 +23,6 @@ CREATE TABLE leaderboard (
     rank INT NOT NULL,
     player_name TEXT NOT NULL,
     player_score INT NOT NULL,
-    UNIQUE(rank)
 );
 
 --Step 6 SCOREBOARD--

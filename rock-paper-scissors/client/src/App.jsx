@@ -100,7 +100,7 @@ function App() {
     setRound(round +1)
 
     //setting rounds and game over condition
-    if (round + 1 === 3) {
+    if (round + 1 === 10) {
       setGameOver(true)
       try {
         await fetch('http://localhost:3000/players', {
