@@ -7,8 +7,11 @@ function Scoreboard({ playerName, playerScore }) {
     const [searchName, setSearchName] = useState('')
     const [searchResults, setSearchResults] = useState([])
 
-    useEffect(() => {
-        async function fetchScoreboard() {
+    useEffect(() => { 
+        fetchScoreboard(); 
+    }, []); 
+
+        const fetchScoreboard = async () => {
             setError(null)
             setLoading(true)
             try {
@@ -25,8 +28,6 @@ function Scoreboard({ playerName, playerScore }) {
                 setLoading(false)
             }
         }
-        fetchScoreboard()
-    }, [])
 
     const handleSearch = async () => {
         setError(null)
@@ -45,6 +46,29 @@ function Scoreboard({ playerName, playerScore }) {
             setLoading(false)
         }
     }
+
+    const handleDelete = async (playerNameToDelete) => { 
+        setError(null); 
+        setLoading(true); 
+        try { 
+            const res = await fetch(`http://localhost:3000/players/${playerNameToDelete}`, { 
+                method: 'DELETE', 
+            }); 
+            if (res.ok) { 
+                await fetchScoreboard(); 
+                const updatedSearchResults = searchResults.filter( 
+                    (player) => player.player_name !== playerNameToDelete 
+                ); 
+                setSearchResults(updatedSearchResults); 
+            } else { 
+                setError('Failed to delete player'); 
+            } 
+        } catch (err) { 
+            setError('Error deleting player: ', err); 
+        } finally { 
+            setLoading(false); 
+        } 
+    }; 
 
     if (loading) {
         return <div>Loading scoreboard...</div>;
@@ -75,11 +99,13 @@ function Scoreboard({ playerName, playerScore }) {
             {searchResults.length > 0 ? (searchResults.map((item) => (
                     <li key={item.player_id}>
                     {item.player_name}: {item.player_score}
+                    <button onClick={() => handleDelete(item.player_name)}>Delete Player</button> 
                     </li>
                 )) 
             ) : (scoreboard.map((item) => (
                     <li key={item.rank} data-rank={item.rank}>
                        <span className='player-name'>{item.player_name}: {item.player_score}</span>
+                       <button onClick={() => handleDelete(item.player_name)}>Delete Player</button> 
                     </li>
                 ))
             )}
@@ -87,5 +113,5 @@ function Scoreboard({ playerName, playerScore }) {
         </div>
     )
 }
-// add in color coded highlight to show their place on the board?
+
 export default Scoreboard

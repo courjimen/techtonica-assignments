@@ -94,6 +94,8 @@ Here you will enter your name
 You click the buttons to play and it tracks your score against the computer
 ![](/client/images/game.png)
 
+![](/client/images/scissors.png)
+
 **Winner Scoreboard:**
 This page displays your score and the rankings for other players _(highlighting the top 3)_
 ![](/client/images/scores.png)
